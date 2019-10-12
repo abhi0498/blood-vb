@@ -32,7 +32,7 @@
             SQL.DBCon.Close()
 
         Catch ex As Exception
-            MsgBox(ex.ToString())
+            MsgBox("Please enter your details!")
 
         End Try
 
@@ -41,16 +41,41 @@
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim Query As String
         Query = "update Donor
-set Donor.fname='" & fname.Text & "'
-        ,Donor.lname='" & lname.Text &
-        "',Donor.blood_group='" & bgroup.Text &
-        "',Donor.city='" & city.Text &
-        "',Donor.locality='" & loc.Text &
-        "',Donor.phone='" & phno.Text & "'
+set Donor.fname='" & fname.Text.Trim() & "'
+        ,Donor.lname='" & lname.Text.Trim &
+        "',Donor.blood_group='" & bgroup.Text.Trim() &
+        "',Donor.city='" & city.Text.Trim() &
+        "',Donor.locality='" & loc.Text.Trim() &
+        "',Donor.phone='" & phno.Text.Trim() & "'
         where Donor.Username='" & Uname & "';"
 
 
         Form3.UpdateQuery(Query)
 
+    End Sub
+
+    Private Sub Sout_Click(sender As Object, e As EventArgs) Handles sout.Click
+        MsgBox(fname.Text & " Signing off...")
+
+        Me.Close()
+
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Dim result As Integer = MessageBox.Show("Sure?", "Delete Account", MessageBoxButtons.YesNo)
+        If result = DialogResult.Yes Then
+            Dim Query As String
+            Query = "delete from Users
+        where Users.Username='" & Uname & "';
+delete from Donor
+        where donor.Username='" & Uname & "';"
+
+            Form3.DeleteQuery(Query)
+
+            MsgBox("Miss you " & fname.Text)
+
+            Me.Close()
+
+        End If
     End Sub
 End Class

@@ -23,6 +23,12 @@ Partial Class DonorPage
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.DonorDetails = New System.Windows.Forms.GroupBox()
+        Me.loc = New System.Windows.Forms.TextBox()
+        Me.lname = New System.Windows.Forms.TextBox()
+        Me.phno = New System.Windows.Forms.TextBox()
+        Me.city = New System.Windows.Forms.TextBox()
+        Me.bgroup = New System.Windows.Forms.TextBox()
+        Me.fname = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -32,12 +38,8 @@ Partial Class DonorPage
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.fname = New System.Windows.Forms.TextBox()
-        Me.bgroup = New System.Windows.Forms.TextBox()
-        Me.city = New System.Windows.Forms.TextBox()
-        Me.phno = New System.Windows.Forms.TextBox()
-        Me.lname = New System.Windows.Forms.TextBox()
-        Me.loc = New System.Windows.Forms.TextBox()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.sout = New System.Windows.Forms.Button()
         Me.DonorDetails.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -46,6 +48,8 @@ Partial Class DonorPage
         Me.DonorDetails.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DonorDetails.Controls.Add(Me.sout)
+        Me.DonorDetails.Controls.Add(Me.Button2)
         Me.DonorDetails.Controls.Add(Me.loc)
         Me.DonorDetails.Controls.Add(Me.lname)
         Me.DonorDetails.Controls.Add(Me.phno)
@@ -61,12 +65,60 @@ Partial Class DonorPage
         Me.DonorDetails.Controls.Add(Me.Label2)
         Me.DonorDetails.Controls.Add(Me.Label1)
         Me.DonorDetails.Controls.Add(Me.Button1)
-        Me.DonorDetails.Location = New System.Drawing.Point(592, 24)
+        Me.DonorDetails.Location = New System.Drawing.Point(309, 12)
         Me.DonorDetails.Name = "DonorDetails"
         Me.DonorDetails.Size = New System.Drawing.Size(468, 652)
         Me.DonorDetails.TabIndex = 0
         Me.DonorDetails.TabStop = False
         Me.DonorDetails.Text = "Donor Details"
+        '
+        'loc
+        '
+        Me.loc.AccessibleName = "locality"
+        Me.loc.Location = New System.Drawing.Point(263, 343)
+        Me.loc.Name = "loc"
+        Me.loc.Size = New System.Drawing.Size(100, 22)
+        Me.loc.TabIndex = 16
+        '
+        'lname
+        '
+        Me.lname.AccessibleName = "lname"
+        Me.lname.Location = New System.Drawing.Point(263, 228)
+        Me.lname.Name = "lname"
+        Me.lname.Size = New System.Drawing.Size(100, 22)
+        Me.lname.TabIndex = 15
+        '
+        'phno
+        '
+        Me.phno.AccessibleName = "phno"
+        Me.phno.Location = New System.Drawing.Point(263, 447)
+        Me.phno.Name = "phno"
+        Me.phno.Size = New System.Drawing.Size(100, 22)
+        Me.phno.TabIndex = 14
+        '
+        'city
+        '
+        Me.city.AccessibleName = "city"
+        Me.city.Location = New System.Drawing.Point(263, 396)
+        Me.city.Name = "city"
+        Me.city.Size = New System.Drawing.Size(100, 22)
+        Me.city.TabIndex = 13
+        '
+        'bgroup
+        '
+        Me.bgroup.AccessibleName = "bgroup"
+        Me.bgroup.Location = New System.Drawing.Point(263, 290)
+        Me.bgroup.Name = "bgroup"
+        Me.bgroup.Size = New System.Drawing.Size(100, 22)
+        Me.bgroup.TabIndex = 12
+        '
+        'fname
+        '
+        Me.fname.AccessibleName = "fname"
+        Me.fname.Location = New System.Drawing.Point(263, 169)
+        Me.fname.Name = "fname"
+        Me.fname.Size = New System.Drawing.Size(100, 22)
+        Me.fname.TabIndex = 11
         '
         'Label10
         '
@@ -142,60 +194,30 @@ Partial Class DonorPage
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(52, 573)
+        Me.Button1.Location = New System.Drawing.Point(41, 540)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(107, 23)
+        Me.Button1.Size = New System.Drawing.Size(158, 56)
         Me.Button1.TabIndex = 0
         Me.Button1.Text = "Update"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'fname
+        'Button2
         '
-        Me.fname.AccessibleName = "fname"
-        Me.fname.Location = New System.Drawing.Point(263, 169)
-        Me.fname.Name = "fname"
-        Me.fname.Size = New System.Drawing.Size(100, 22)
-        Me.fname.TabIndex = 11
+        Me.Button2.Location = New System.Drawing.Point(326, 540)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(122, 56)
+        Me.Button2.TabIndex = 17
+        Me.Button2.Text = "Delete my account"
+        Me.Button2.UseVisualStyleBackColor = True
         '
-        'bgroup
+        'sout
         '
-        Me.bgroup.AccessibleName = "bgroup"
-        Me.bgroup.Location = New System.Drawing.Point(263, 290)
-        Me.bgroup.Name = "bgroup"
-        Me.bgroup.Size = New System.Drawing.Size(100, 22)
-        Me.bgroup.TabIndex = 12
-        '
-        'city
-        '
-        Me.city.AccessibleName = "city"
-        Me.city.Location = New System.Drawing.Point(263, 396)
-        Me.city.Name = "city"
-        Me.city.Size = New System.Drawing.Size(100, 22)
-        Me.city.TabIndex = 13
-        '
-        'phno
-        '
-        Me.phno.AccessibleName = "phno"
-        Me.phno.Location = New System.Drawing.Point(263, 447)
-        Me.phno.Name = "phno"
-        Me.phno.Size = New System.Drawing.Size(100, 22)
-        Me.phno.TabIndex = 14
-        '
-        'lname
-        '
-        Me.lname.AccessibleName = "lname"
-        Me.lname.Location = New System.Drawing.Point(263, 228)
-        Me.lname.Name = "lname"
-        Me.lname.Size = New System.Drawing.Size(100, 22)
-        Me.lname.TabIndex = 15
-        '
-        'loc
-        '
-        Me.loc.AccessibleName = "locality"
-        Me.loc.Location = New System.Drawing.Point(263, 343)
-        Me.loc.Name = "loc"
-        Me.loc.Size = New System.Drawing.Size(100, 22)
-        Me.loc.TabIndex = 16
+        Me.sout.Location = New System.Drawing.Point(376, 11)
+        Me.sout.Name = "sout"
+        Me.sout.Size = New System.Drawing.Size(86, 34)
+        Me.sout.TabIndex = 18
+        Me.sout.Text = "Sign-out"
+        Me.sout.UseVisualStyleBackColor = True
         '
         'DonorPage
         '
@@ -227,4 +249,6 @@ Partial Class DonorPage
     Friend WithEvents city As TextBox
     Friend WithEvents bgroup As TextBox
     Friend WithEvents fname As TextBox
+    Friend WithEvents sout As Button
+    Friend WithEvents Button2 As Button
 End Class

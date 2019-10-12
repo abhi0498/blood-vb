@@ -73,8 +73,6 @@ Public Class Form3
 
             command.ExecuteNonQuery()
 
-            MsgBox("Delete successful")
-
             DBCon.Close()
 
         Catch ex As Exception

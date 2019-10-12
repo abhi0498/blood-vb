@@ -17,3 +17,5 @@ C:\Users\home\source\repos\Blood2\Blood2\bin\Debug\Blood2.xml
 C:\Users\home\source\repos\Blood2\Blood2\obj\Debug\Blood2.exe
 C:\Users\home\source\repos\Blood2\Blood2\obj\Debug\Blood2.xml
 C:\Users\home\source\repos\Blood2\Blood2\obj\Debug\Blood2.pdb
+C:\Users\home\source\repos\Blood2\Blood2\obj\Debug\Blood2.vbprojAssemblyReference.cache
+C:\Users\home\source\repos\Blood2\Blood2\obj\Debug\Blood2.HospitalForm.resources

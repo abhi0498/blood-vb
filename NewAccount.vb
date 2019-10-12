@@ -6,7 +6,8 @@
             If Type.Text = "Donor" Then
                 Query = "INSERT INTO Donor (UserName,blood_group) VALUES('" & user.Text & "',' ')"
                 Form3.InsertQuery(Query)
-
+                Me.Close()
+                Form2.Show()
             End If
 
         Catch ex As Exception
